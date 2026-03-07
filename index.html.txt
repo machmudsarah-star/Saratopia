@@ -3,18 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name – Content Creator Portfolio</title>
+  <title>Sarah Machmud – Content Creator Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
+  
+  .links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.link-card {
+  background: rgba(15,23,42,0.9);
+  border-radius: 14px;
+  padding: 10px 11px;
+  border: 1px solid rgba(148,163,184,0.4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(15,23,42,0.9);
+  border-color: rgba(96,165,250,0.8);
+}
+
+.link-emoji {
+  font-size: 1.1rem;
+}
+
+.link-text {
+  flex: 1;
+}
+
+.link-title {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.link-caption {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.link-arrow {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
     :root {
-      --bg: #050816;
-      --bg-alt: #0b1020;
+      --bg: #ffffff;
       --accent: #9b5cff;
-      --accent-soft: rgba(155, 92, 255, 0.15);
-      --text: #f5f5ff;
-      --muted: #a0a3c2;
+      --text: #020617;
+      --muted: #6b7280;
       --card: #0f172a;
       --radius-lg: 22px;
       --radius-pill: 999px;
@@ -24,7 +72,7 @@
 
     body {
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont;
-      background: radial-gradient(circle at top, #1f2937 0, #020617 48%, #000 100%);
+      background: #ffffff;
       color: var(--text);
       min-height: 100vh;
       padding: 32px 16px 48px;
@@ -35,14 +83,14 @@
     .page {
       width: 100%;
       max-width: 980px;
-      background: linear-gradient(135deg, rgba(148,163,184,0.14), rgba(15,23,42,0.92));
+      background: radial-gradient(circle at top left, rgba(148,163,184,0.16), rgba(15,23,42,0.98));
       border-radius: 32px;
       padding: 28px 24px 32px;
-      border: 1px solid rgba(148,163,184,0.35);
+      border: 1px solid rgba(15,23,42,0.12);
       box-shadow:
-        0 28px 80px rgba(15,23,42,0.85),
-        0 0 0 1px rgba(15,23,42,1) inset;
-      backdrop-filter: blur(18px);
+        0 18px 60px rgba(15,23,42,0.35),
+        0 0 0 1px rgba(15,23,42,0.9) inset;
+      color: #f9fafb;
     }
 
     header {
@@ -52,6 +100,12 @@
       align-items: center;
       justify-content: space-between;
       margin-bottom: 32px;
+    }
+
+    .header-left {
+      display:flex;
+      align-items:center;
+      gap:14px;
     }
 
     .logo-mark {
@@ -68,6 +122,21 @@
       letter-spacing: 0.06em;
     }
 
+    .profile-photo {
+      width: 54px;
+      height: 54px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(148,163,184,0.5);
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display:block;
+    }
+
     .name-block h1 {
       font-size: clamp(1.6rem, 1.4rem + 0.6vw, 1.9rem);
       font-weight: 600;
@@ -75,7 +144,7 @@
 
     .name-block p {
       font-size: 0.9rem;
-      color: var(--muted);
+      color: #e5e7eb;
       margin-top: 2px;
     }
 
@@ -84,7 +153,7 @@
       border-radius: var(--radius-pill);
       border: 1px solid rgba(148,163,184,0.45);
       font-size: 0.78rem;
-      color: var(--muted);
+      color: #e5e7eb;
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -142,7 +211,7 @@
       background: rgba(15,23,42,0.8);
       border: 1px solid rgba(148,163,184,0.4);
       font-size: 0.75rem;
-      color: var(--muted);
+      color: #d1d5db;
       margin-bottom: 10px;
     }
 
@@ -165,7 +234,7 @@
 
     .hero p {
       font-size: 0.9rem;
-      color: var(--muted);
+      color: #e5e7eb;
       max-width: 30rem;
       margin-bottom: 18px;
     }
@@ -187,7 +256,7 @@
 
     .metric-label {
       font-size: 0.72rem;
-      color: var(--muted);
+      color: #9ca3af;
       margin-bottom: 2px;
     }
 
@@ -232,7 +301,7 @@
 
     .btn-outline {
       background: rgba(15,23,42,0.9);
-      color: var(--muted);
+      color: #e5e7eb;
       border-color: rgba(148,163,184,0.6);
     }
 
@@ -275,7 +344,7 @@
       font-size: 0.82rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: #9ca3af;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -283,7 +352,7 @@
 
     .section-heading span {
       font-size: 0.72rem;
-      color: rgba(148,163,184,0.9);
+      color: rgba(209,213,219,0.9);
       text-transform: none;
       letter-spacing: 0;
     }
@@ -311,7 +380,7 @@
 
     .company-main p {
       font-size: 0.78rem;
-      color: var(--muted);
+      color: #9ca3af;
     }
 
     .company-metrics {
@@ -346,7 +415,7 @@
 
     .note {
       font-size: 0.75rem;
-      color: var(--muted);
+      color: #d1d5db;
       border-top: 1px dashed rgba(148,163,184,0.35);
       padding-top: 8px;
     }
@@ -354,7 +423,7 @@
     footer {
       margin-top: 26px;
       font-size: 0.74rem;
-      color: var(--muted);
+      color: #d1d5db;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -369,21 +438,40 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    .links-list {
+      margin-top: 14px;
+      font-size: 0.78rem;
+    }
+
+    .links-list a {
+      color: #38bdf8;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .links-list a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <div class="page">
     <header>
-      <div style="display:flex;align-items:center;gap:10px;">
-        <div class="logo-mark">YC</div>
+      <div class="header-left">
+        
+        <div class="profile-photo">
+          <img src="profile.jpg" alt="Portrait of Sarah Machmud">
+        </div>
         <div class="name-block">
-          <h1>Your Name</h1>
-          <p>Content Creator · Social Media Growth & Brand Storytelling</p>
+        <h1 style="color: #070A19;">Sarah Machmud</h1>
+<p style="color: #000000;">Content Creator · Social Media Growth & Brand Storytelling</p>
         </div>
       </div>
       <div class="pill">
         <span class="pill-dot"></span>
-        Open to collaborations & full‑time roles
+        Open to collaborations & project‑based roles
       </div>
     </header>
 
@@ -394,109 +482,213 @@
             Content that turns <span>views into loyal communities</span>
           </div>
           <h2>
-            I help brands grow across <span>Reels, TikTok & YouTube</span>.
+            I help brands grow across <span>Reels, TikTok & paid social</span>.
           </h2>
           <p>
-            From concepts and scripting to editing and analytics, I create scroll‑stopping content
-            that drives consistent audience and revenue growth for brands in lifestyle, tech, and e‑commerce.
+            I started out as a lab technician with zero plans to be in content,
+            then discovered I had a real talent for performance‑driven creative.
+            Today I concept, script, edit and optimize content that drives growth, sales
+            and powerful Black Friday campaigns.
           </p>
 
           <div class="metrics-row">
             <div class="metric">
               <div class="metric-label">Total views generated</div>
-              <div class="metric-value">18.4M+</div>
-              <div class="metric-trend">Consistent 90‑day growth</div>
+              <div class="metric-value">25M+</div>
+              <div class="metric-trend">Across organic & paid</div>
             </div>
             <div class="metric">
-              <div class="metric-label">Best performing series</div>
-              <div class="metric-value">+247% watch time</div>
+              <div class="metric-label">Best performing watch time</div>
+              <div class="metric-value">+265%</div>
               <div class="metric-trend">Vs previous content</div>
             </div>
           </div>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://your-portfolio-link.com" target="_blank" rel="noopener">
-              <span>View full case studies</span>
+            <a class="btn btn-primary" href="https://www.instagram.com/p/DM0D4LUTraE/" target="_blank" rel="noopener">
+              <span>Watch my best work</span>
               <span class="btn-icon">↗</span>
             </a>
             <a class="btn btn-outline" href="mailto:youremail@example.com">
-              <span>Book a 15‑min intro call</span>
+              <span>Discuss your next winning ad</span>
             </a>
           </div>
+
+          <div class="links-list">
+  <span style="color:#d1d5db;display:block;margin-bottom:8px;">
+    More selected Reels & posts:
+  </span>
+  <div class="links-grid">
+    <a class="link-card" href="https://www.instagram.com/p/DUo95iFE_Bm/" target="_blank" rel="noopener">
+      <div class="link-emoji">👩‍💼</div>
+      <div class="link-text">
+        <div class="link-title">Malu The Manager</div>
+        <div class="link-caption">Character, attitude, storytelling</div>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link-card" href="https://www.instagram.com/p/DVi3cCck35N/" target="_blank" rel="noopener">
+      <div class="link-emoji">🌎</div>
+      <div class="link-text">
+        <div class="link-title">Visit Venezuela</div>
+        <div class="link-caption">Travel, culture & emotion</div>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link-card" href="https://www.instagram.com/reel/DJAllipSuRu/" target="_blank" rel="noopener">
+      <div class="link-emoji">✨</div>
+      <div class="link-text">
+        <div class="link-title">3 Sarah's at ONCE</div>
+        <div class="link-caption">Creative edits & cloning</div>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link-card" href="https://www.instagram.com/reel/DS67mjciaek/" target="_blank" rel="noopener">
+      <div class="link-emoji">💧</div>
+      <div class="link-text">
+        <div class="link-title">Lymphatic Revolution</div>
+        <div class="link-caption">Education that converts</div>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link-card" href="https://www.instagram.com/reel/DS1-y3oEhXB/" target="_blank" rel="noopener">
+      <div class="link-emoji">🧴</div>
+      <div class="link-text">
+        <div class="link-title">Un Clog Dry Brushing</div>
+        <div class="link-caption">Routine, texture & detail</div>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link-card" href="https://www.instagram.com/reel/DRRewz7D-bg/" target="_blank" rel="noopener">
+      <div class="link-emoji">📈</div>
+      <div class="link-text">
+        <div class="link-title">Big Results from Ads</div>
+        <div class="link-caption">Performance, data & trust</div>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link-card" href="https://www.instagram.com/p/C_ZS-mcpGRw/" target="_blank" rel="noopener">
+      <div class="link-emoji">💰</div>
+      <div class="link-text">
+        <div class="link-title">My First Paid Ad</div>
+        <div class="link-caption">From organic to paid success</div>
+      </div>
+      <span class="link-arrow">↗</span>
+    </a>
+  </div>
+</div>
+
         </div>
       </section>
 
       <aside class="sidebar">
         <div class="section-heading">
-          BRANDS I’VE GROWN
+          BRANDS & ACCOUNTS I’VE GROWN
           <span>Selected case studies</span>
         </div>
 
         <div class="company-list">
-          <!-- Company 1 -->
+          <!-- Case Study 1: Personal account -->
           <article class="company-card">
             <div class="company-main">
-              <h3>Company One · Beauty e‑commerce</h3>
-              <p>UGC & Reels for launches, always‑on storytelling, monthly analytics reports.</p>
-              <a class="company-link" href="https://link-to-your-playlist-or-folder.com" target="_blank" rel="noopener">
-                Watch sample content ↗
+              <h3>SarahMachmud · Personal brand</h3>
+              <p>
+                Instagram account where I talk about the world, politics and
+                random thoughts, built purely through organic content, not monetised.
+              </p>
+              <a class="company-link" href="https://www.instagram.com/sarahmachmud/" target="_blank" rel="noopener">
+                Visit @sarahmachmud ↗
               </a>
             </div>
             <div class="company-metrics">
               <div class="chip">
-                <span>+312%</span>
-                <span>followers in 6 months</span>
+                <span>3K → 11K</span>
+                <span>followers</span>
               </div>
-              <div>Average 8.4% IG Reels engagement</div>
+              <div>Grown by storytelling & consistent Reels</div>
             </div>
           </article>
 
-          <!-- Company 2 -->
+          <!-- Case Study 2: Lab account -->
           <article class="company-card">
             <div class="company-main">
-              <h3>Company Two · Tech startup</h3>
-              <p>Short‑form video strategy across TikTok, LinkedIn clips, and YouTube Shorts.</p>
-              <a class="company-link" href="https://link-to-project-2.com" target="_blank" rel="noopener">
-                View TikTok & Shorts ↗
-              </a>
+              <h3>ONE LABS · Early days</h3>
+              <p>
+                While working as a lab technician, I grew this lab’s social
+                account from 1K to 3K followers without even realising I had
+                a talent for social media yet.
+              </p>
             </div>
             <div class="company-metrics">
               <div class="chip">
-                <span>+187%</span>
-                <span>monthly impressions</span>
+                <span>1K → 3K</span>
+                <span>followers</span>
               </div>
-              <div>Best video: 1.2M organic views</div>
+              <div>My first proof of content instincts</div>
             </div>
           </article>
 
-          <!-- Company 3 -->
+          <!-- Case Study 3: Chelsey Jean Lymphatics -->
           <article class="company-card">
             <div class="company-main">
-              <h3>Company Three · Local brand</h3>
-              <p>Content calendar, vertical video production, on‑location shoots and editing.</p>
-              <a class="company-link" href="https://link-to-project-3.com" target="_blank" rel="noopener">
-                See campaign highlights ↗
+              <h3>Chelsey Jean Lymphatics</h3>
+              <p>
+                Organic and paid‑ready creatives for a health & lymphatics brand,
+                including ongoing content and a high‑performing Black Friday campaign.
+              </p>
+              <a class="company-link" href="https://www.instagram.com/chelsey_jean_lymphatics/" target="_blank" rel="noopener">
+                Visit @chelsey_jean_lymphatics ↗
               </a>
             </div>
             <div class="company-metrics">
               <div class="chip">
-                <span>+54%</span>
-                <span>in‑store sales over campaign</span>
+                <span>54K → 93K</span>
+                <span>followers</span>
               </div>
-              <div>Avg. 3.1x lift in video reach</div>
+              <div>Black Friday campaign drove $4M in revenue</div>
+            </div>
+          </article>
+
+          <!-- Case Study 4: Solar / SEO & leads -->
+          <article class="company-card">
+            <div class="company-main">
+              <h3>Sunlife Energy · Solar & SEO</h3>
+              <p>
+                Learned SEO, managed leads from paid ads and helped turn click
+                traffic into conversations with sales. The business itself struggled,
+                but it taught me how fast‑paced Australian startups really operate.
+              </p>
+              <span style="font-size:0.75rem;color:#9ca3af;">
+                Not every company wins – I value the lessons from the “failed” ones too.
+              </span>
+            </div>
+            <div class="company-metrics">
+              <div class="chip" style="background:rgba(248,113,113,0.12);color:#fca5a5;">
+                <span>Hard‑won</span>
+                <span>experience</span>
+              </div>
+              <div>Hands‑on with SEO, paid leads & product ideas</div>
             </div>
           </article>
         </div>
 
         <p class="note">
-          Full references and additional projects are available on request. I am based in Brisbane (AEST) and work with clients worldwide.
+          I create “winner ads” by testing multiple creatives (3–9 per week when needed),
+          watching the data closely, and doubling down on what converts. I’m based in Brisbane
+          and do my best work as a contractor, focused on the exact hours and output you need.
         </p>
       </aside>
     </main>
 
     <footer>
-      <span>© <span id="year"></span> Your Name · Content Creator</span>
-      <span>Download this portfolio as PDF · <a href="https://your-drive-or-pdf-link.com" target="_blank" rel="noopener">View PDF</a></span>
+      <span>© <span id="year"></span> Sarah Machmud · Content Creator</span>
+      <span>Portfolio link for resume · <a href="https://your-github-pages-url.com" target="_blank" rel="noopener">Open online version</a></span>
     </footer>
   </div>
 
