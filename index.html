@@ -162,7 +162,8 @@
     @media (max-width: 800px) {
       main { grid-template-columns: minmax(0, 1fr); }
       .extra-card-inner,
-      .proof-card-inner { max-width: 100%; }
+      .proof-card-inner,
+      .bulk-card-inner { max-width: 100%; }
     }
 
     .hero {
@@ -534,7 +535,7 @@
       text-align: center;
     }
 
-    /* PROOF & BULK CONTENT CARD */
+    /* PROOF CARD */
     .proof-card {
       grid-column: 1 / -1;
       margin-top: 18px;
@@ -550,53 +551,27 @@
       background: rgba(15,23,42,0.96);
       border: 1px solid rgba(148,163,184,0.5);
       box-shadow: 0 18px 40px rgba(15,23,42,0.9);
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
-      gap: 18px;
-      align-items: center;
-    }
-
-    @media (max-width: 700px) {
-      .proof-card-inner {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .proof-text {
       font-size: 0.8rem;
       color: #e5e7eb;
     }
 
-    .proof-text h3 {
+    .proof-card-inner h3 {
       font-size: 0.95rem;
       margin-bottom: 6px;
     }
 
-    .proof-text p {
+    .proof-card-inner p {
       margin-bottom: 8px;
       color: #d1d5db;
     }
 
-    .proof-text a {
+    .proof-card-inner a {
       color: #38bdf8;
       text-decoration: none;
     }
 
-    .proof-text a:hover {
+    .proof-card-inner a:hover {
       text-decoration: underline;
-    }
-
-    .bulk-image {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(148,163,184,0.5);
-    }
-
-    .bulk-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display:block;
     }
 
     .proof-label {
@@ -610,6 +585,62 @@
     .proof-highlight {
       font-weight: 600;
       color: #facc15;
+    }
+
+    /* BULK AI CONTENT CARD */
+    .bulk-card {
+      grid-column: 1 / -1;
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .bulk-card-inner {
+      max-width: 760px;
+      width: 100%;
+      padding: 18px 18px 20px;
+      border-radius: 20px;
+      background: rgba(15,23,42,0.96);
+      border: 1px solid rgba(148,163,184,0.5);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.9);
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
+      gap: 18px;
+      align-items: center;
+    }
+
+    @media (max-width: 700px) {
+      .bulk-card-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .bulk-text {
+      font-size: 0.8rem;
+      color: #e5e7eb;
+    }
+
+    .bulk-text h3 {
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .bulk-text p {
+      margin-bottom: 8px;
+      color: #d1d5db;
+    }
+
+    .bulk-image {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(148,163,184,0.5);
+    }
+
+    .bulk-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display:block;
     }
   </style>
 </head>
@@ -876,33 +907,49 @@
         </div>
       </section>
 
-      <!-- PROOF & BULK CONTENT CARD -->
+      <!-- PROOF CARD -->
       <section class="proof-card">
         <div class="proof-card-inner">
-          <div class="proof-text">
-            <div class="proof-label">Client proof</div>
-            <h3>Smoky Barbershop · Local SEO & bookings</h3>
+          <div class="proof-label">Client proof</div>
+          <h3>Smoky Barbershop · Local SEO & bookings</h3>
+          <p>
+            “I passed from 4 bookings a day to 11 bookings and at least 4 walk‑ins.
+            Now I am looking for a new barber and this is life changing. From my understanding
+            she has only played with the SEO of my website and my Google account. I am very happy with everything.”
+          </p>
+          <p>
+            <a href="https://www.smokybarbershop.com/" target="_blank" rel="noopener">
+              Visit smokybarbershop.com ↗
+            </a>
+          </p>
+          <p>
+            If you want to see my clients’ progress over time, check my LinkedIn – I regularly
+            post what I am working on:
+            <br>
+            <a href="https://www.linkedin.com/in/sarah-machmud-556a64176/" target="_blank" rel="noopener">
+              LinkedIn · Sarah Machmud ↗
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <!-- BULK AI CONTENT CARD -->
+      <section class="bulk-card">
+        <div class="bulk-card-inner">
+          <div class="bulk-text">
+            <div class="proof-label">Bulk content systems</div>
+            <h3>Teaching founders how to bulk‑make content with AI</h3>
             <p>
-              “I passed from 4 bookings a day to 11 bookings and at least 4 walk‑ins.
-              Now I am looking for a new barber and this is life changing. From my understanding
-              she has only played with the SEO of my website and my Google account. I am very happy with everything.”
+              I don’t just make content for you – I show you how to bulk‑create it with AI,
+              organise it, and keep your feeds alive even on your busiest weeks.
             </p>
             <p>
-              <a href="https://www.smokybarbershop.com/" target="_blank" rel="noopener">
-                Visit smokybarbershop.com ↗
-              </a>
-            </p>
-            <p>
-              If you want to see my clients’ progress over time, check my LinkedIn – I regularly
-              post what I am working on:
-              <br>
-              <a href="https://www.linkedin.com/in/sarah-machmud-556a64176/" target="_blank" rel="noopener">
-                LinkedIn · Sarah Machmud ↗
-              </a>
+              I use AI because if I don’t, the system will eat me for breakfast – there’s no award
+              for suffering through manual work when smart tools can do the heavy lifting.
             </p>
             <p class="proof-highlight">
-              I also teach founders how to bulk‑make content using AI – and I leave that knowledge with you,
-              so your team can keep feeding the algorithm even when I’m not in the room.
+              When we work together, I leave you with clear templates, prompts and workflows so your team
+              can keep feeding the algorithm long after our contract ends.
             </p>
           </div>
           <div class="bulk-image">
