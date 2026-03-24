@@ -34,28 +34,11 @@
       border-color: rgba(96,165,250,0.8);
     }
 
-    .link-emoji {
-      font-size: 1.1rem;
-    }
-
-    .link-text {
-      flex: 1;
-    }
-
-    .link-title {
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-
-    .link-caption {
-      font-size: 0.75rem;
-      color: #9ca3af;
-    }
-
-    .link-arrow {
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
+    .link-emoji { font-size: 1.1rem; }
+    .link-text { flex: 1; }
+    .link-title { font-size: 0.85rem; font-weight: 500; }
+    .link-caption { font-size: 0.75rem; color: #9ca3af; }
+    .link-arrow { font-size: 0.9rem; opacity: 0.8; }
 
     :root {
       --bg: #ffffff;
@@ -362,19 +345,9 @@
       align-items: center;
     }
 
-    .company-main h3 {
-      font-size: 0.9rem;
-    }
-
-    .company-main p {
-      font-size: 0.78rem;
-      color: #9ca3af;
-    }
-
-    .company-metrics {
-      text-align: right;
-      font-size: 0.74rem;
-    }
+    .company-main h3 { font-size: 0.9rem; }
+    .company-main p { font-size: 0.78rem; color: #9ca3af; }
+    .company-metrics { text-align: right; font-size: 0.74rem; }
 
     .chip {
       display: inline-flex;
@@ -387,9 +360,7 @@
       margin-bottom: 2px;
     }
 
-    .chip span {
-      font-size: 0.72rem;
-    }
+    .chip span { font-size: 0.72rem; }
 
     .company-link {
       font-size: 0.75rem;
@@ -397,9 +368,7 @@
       color: #38bdf8;
     }
 
-    .company-link:hover {
-      text-decoration: underline;
-    }
+    .company-link:hover { text-decoration: underline; }
 
     .note {
       font-size: 0.75rem;
@@ -430,11 +399,15 @@
       margin-bottom: 4px;
     }
 
-    .links-list a:hover {
-      text-decoration: underline;
+    .links-list a:hover { text-decoration: underline; }
+
+    .winner-copy {
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: #e5e7eb;
     }
 
-    /* EXTRA GAME CARD STYLES */
+    /* EXTRA GAME CARD */
     .extra-card {
       grid-column: 1 / -1;
       margin-top: 26px;
@@ -535,17 +508,19 @@
       text-align: center;
     }
 
-    /* PROOF CARD */
-    .proof-card {
+    /* PROOF + BULK CARDS WRAPPER */
+    .results-row {
       grid-column: 1 / -1;
       margin-top: 18px;
       display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
       justify-content: center;
     }
 
-    .proof-card-inner {
-      max-width: 760px;
-      width: 100%;
+    .results-card {
+      flex: 1 1 320px;
+      max-width: 380px;
       padding: 18px 18px 20px;
       border-radius: 20px;
       background: rgba(15,23,42,0.96);
@@ -555,24 +530,22 @@
       color: #e5e7eb;
     }
 
-    .proof-card-inner h3 {
+    .results-card h3 {
       font-size: 0.95rem;
       margin-bottom: 6px;
     }
 
-    .proof-card-inner p {
+    .results-card p {
       margin-bottom: 8px;
       color: #d1d5db;
     }
 
-    .proof-card-inner a {
+    .results-card a {
       color: #38bdf8;
       text-decoration: none;
     }
 
-    .proof-card-inner a:hover {
-      text-decoration: underline;
-    }
+    .results-card a:hover { text-decoration: underline; }
 
     .proof-label {
       font-size: 0.76rem;
@@ -582,55 +555,20 @@
       margin-bottom: 4px;
     }
 
+    .results-card--highlight {
+      border-color: rgba(250,204,21,0.9);
+      box-shadow:
+        0 20px 55px rgba(15,23,42,0.95),
+        0 0 0 1px rgba(250,204,21,0.4);
+    }
+
     .proof-highlight {
       font-weight: 600;
       color: #facc15;
     }
 
-    /* BULK AI CONTENT CARD */
-    .bulk-card {
-      grid-column: 1 / -1;
-      margin-top: 18px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .bulk-card-inner {
-      max-width: 760px;
-      width: 100%;
-      padding: 18px 18px 20px;
-      border-radius: 20px;
-      background: rgba(15,23,42,0.96);
-      border: 1px solid rgba(148,163,184,0.5);
-      box-shadow: 0 18px 40px rgba(15,23,42,0.9);
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
-      gap: 18px;
-      align-items: center;
-    }
-
-    @media (max-width: 700px) {
-      .bulk-card-inner {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .bulk-text {
-      font-size: 0.8rem;
-      color: #e5e7eb;
-    }
-
-    .bulk-text h3 {
-      font-size: 0.95rem;
-      margin-bottom: 6px;
-    }
-
-    .bulk-text p {
-      margin-bottom: 8px;
-      color: #d1d5db;
-    }
-
     .bulk-image {
+      margin-top: 10px;
       border-radius: 16px;
       overflow: hidden;
       border: 1px solid rgba(148,163,184,0.5);
@@ -769,6 +707,12 @@
                 <span class="link-arrow">↗</span>
               </a>
             </div>
+
+            <p class="winner-copy">
+              I create “winner ads” by testing multiple creatives (3–9 per week when needed),
+              watching the data closely, and doubling down on what converts. I’m based in Brisbane
+              and do my best work as a contractor, focused on the exact hours and output you need.
+            </p>
           </div>
         </div>
       </section>
@@ -780,7 +724,7 @@
         </div>
 
         <div class="company-list">
-          <!-- Case Study 1: Personal account -->
+          <!-- Personal brand -->
           <article class="company-card">
             <div class="company-main">
               <h3>SarahMachmud · Personal brand</h3>
@@ -802,7 +746,7 @@
             </div>
           </article>
 
-          <!-- Case Study 2: Lab account -->
+          <!-- ONE LABS -->
           <article class="company-card">
             <div class="company-main">
               <h3>ONE LABS · Early days</h3>
@@ -821,7 +765,7 @@
             </div>
           </article>
 
-          <!-- Case Study 3: Chelsey Jean Lymphatics -->
+          <!-- Chelsey Jean -->
           <article class="company-card">
             <div class="company-main">
               <h3>Chelsey Jean Lymphatics</h3>
@@ -845,7 +789,7 @@
             </div>
           </article>
 
-          <!-- Case Study 4: Sunlife Energy -->
+          <!-- Sunlife -->
           <article class="company-card">
             <div class="company-main">
               <h3>Sunlife Energy · Solar & SEO</h3>
@@ -875,7 +819,7 @@
         </p>
       </aside>
 
-      <!-- FUN EXTRA GAME CARD -->
+      <!-- GAME -->
       <section class="extra-card">
         <div class="extra-card-inner">
           <div class="extra-badge">
@@ -907,9 +851,10 @@
         </div>
       </section>
 
-      <!-- PROOF CARD -->
-      <section class="proof-card">
-        <div class="proof-card-inner">
+      <!-- RESULTS ROW: CLIENT PROOF + AI BULK -->
+      <section class="results-row">
+        <!-- Client proof card -->
+        <div class="results-card results-card--highlight">
           <div class="proof-label">Client proof</div>
           <h3>Smoky Barbershop · Local SEO & bookings</h3>
           <p>
@@ -922,6 +867,12 @@
               Visit smokybarbershop.com ↗
             </a>
           </p>
+        </div>
+
+        <!-- AI / bulk content card -->
+        <div class="results-card">
+          <div class="proof-label">How I work with AI</div>
+          <h3>If you want to see progress – and keep it going</h3>
           <p>
             If you want to see my clients’ progress over time, check my LinkedIn – I regularly
             post what I am working on:
@@ -930,28 +881,14 @@
               LinkedIn · Sarah Machmud ↗
             </a>
           </p>
-        </div>
-      </section>
-
-      <!-- BULK AI CONTENT CARD -->
-      <section class="bulk-card">
-        <div class="bulk-card-inner">
-          <div class="bulk-text">
-            <div class="proof-label">Bulk content systems</div>
-            <h3>Teaching founders how to bulk‑make content with AI</h3>
-            <p>
-              I don’t just make content for you – I show you how to bulk‑create it with AI,
-              organise it, and keep your feeds alive even on your busiest weeks.
-            </p>
-            <p>
-              I use AI because if I don’t, the system will eat me for breakfast – there’s no award
-              for suffering through manual work when smart tools can do the heavy lifting.
-            </p>
-            <p class="proof-highlight">
-              When we work together, I leave you with clear templates, prompts and workflows so your team
-              can keep feeding the algorithm long after our contract ends.
-            </p>
-          </div>
+          <p>
+            I don’t just make content for you – I show you how to bulk‑create it with AI,
+            organise it, and keep your feeds alive even on your busiest weeks.
+          </p>
+          <p class="proof-highlight">
+            I use AI because if I don’t, the system eats humans for breakfast – there’s no prize
+            for suffering through manual work when smart tools can do the heavy lifting.
+          </p>
           <div class="bulk-image">
             <img src="Bulk-Made.jpg" alt="Bulk content made with AI and planning system">
           </div>
