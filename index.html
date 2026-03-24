@@ -161,7 +161,8 @@
 
     @media (max-width: 800px) {
       main { grid-template-columns: minmax(0, 1fr); }
-      .extra-card-inner { max-width: 100%; }
+      .extra-card-inner,
+      .proof-card-inner { max-width: 100%; }
     }
 
     .hero {
@@ -406,35 +407,6 @@
       padding-top: 8px;
     }
 
-    .testimonial {
-      margin-top: 14px;
-      padding: 10px 11px;
-      border-radius: 14px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(148,163,184,0.4);
-      font-size: 0.78rem;
-      color: #e5e7eb;
-    }
-
-    .testimonial strong {
-      font-weight: 600;
-    }
-
-    .linkedin-block {
-      margin-top: 12px;
-      font-size: 0.78rem;
-      color: #e5e7eb;
-    }
-
-    .linkedin-block a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-
-    .linkedin-block a:hover {
-      text-decoration: underline;
-    }
-
     footer {
       margin-top: 26px;
       font-size: 0.74rem;
@@ -560,6 +532,84 @@
       color: #d1d5db;
       min-height: 1.2em;
       text-align: center;
+    }
+
+    /* PROOF & BULK CONTENT CARD */
+    .proof-card {
+      grid-column: 1 / -1;
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .proof-card-inner {
+      max-width: 760px;
+      width: 100%;
+      padding: 18px 18px 20px;
+      border-radius: 20px;
+      background: rgba(15,23,42,0.96);
+      border: 1px solid rgba(148,163,184,0.5);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.9);
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
+      gap: 18px;
+      align-items: center;
+    }
+
+    @media (max-width: 700px) {
+      .proof-card-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .proof-text {
+      font-size: 0.8rem;
+      color: #e5e7eb;
+    }
+
+    .proof-text h3 {
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .proof-text p {
+      margin-bottom: 8px;
+      color: #d1d5db;
+    }
+
+    .proof-text a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .proof-text a:hover {
+      text-decoration: underline;
+    }
+
+    .bulk-image {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(148,163,184,0.5);
+    }
+
+    .bulk-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display:block;
+    }
+
+    .proof-label {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #9ca3af;
+      margin-bottom: 4px;
+    }
+
+    .proof-highlight {
+      font-weight: 600;
+      color: #facc15;
     }
   </style>
 </head>
@@ -792,26 +842,6 @@
           watching the data closely, and doubling down on what converts. I’m based in Brisbane
           and do my best work as a contractor, focused on the exact hours and output you need.
         </p>
-
-        <div class="testimonial">
-          <strong>Smoky Barbershop</strong><br><br>
-          “I passed from 4 bookings a day to 11 bookings and at least 4 walk‑ins.
-          Now I am looking for a new barber and this is life changing. From my understanding
-          she has only played with the SEO of my website and my Google account. I am very happy with everything.”
-          <br><br>
-          <a class="company-link" href="https://www.smokybarbershop.com/" target="_blank" rel="noopener">
-            Visit smokybarbershop.com ↗
-          </a>
-        </div>
-
-        <div class="linkedin-block">
-          If you want to see my clients’ progress over time, check my LinkedIn – I
-          regularly post what I am working on:
-          <br>
-          <a href="https://www.linkedin.com/in/sarah-machmud-556a64176/" target="_blank" rel="noopener">
-            LinkedIn · Sarah Machmud ↗
-          </a>
-        </div>
       </aside>
 
       <!-- FUN EXTRA GAME CARD -->
@@ -843,6 +873,41 @@
           </div>
 
           <div class="extra-message" id="extraMessage"></div>
+        </div>
+      </section>
+
+      <!-- PROOF & BULK CONTENT CARD -->
+      <section class="proof-card">
+        <div class="proof-card-inner">
+          <div class="proof-text">
+            <div class="proof-label">Client proof</div>
+            <h3>Smoky Barbershop · Local SEO & bookings</h3>
+            <p>
+              “I passed from 4 bookings a day to 11 bookings and at least 4 walk‑ins.
+              Now I am looking for a new barber and this is life changing. From my understanding
+              she has only played with the SEO of my website and my Google account. I am very happy with everything.”
+            </p>
+            <p>
+              <a href="https://www.smokybarbershop.com/" target="_blank" rel="noopener">
+                Visit smokybarbershop.com ↗
+              </a>
+            </p>
+            <p>
+              If you want to see my clients’ progress over time, check my LinkedIn – I regularly
+              post what I am working on:
+              <br>
+              <a href="https://www.linkedin.com/in/sarah-machmud-556a64176/" target="_blank" rel="noopener">
+                LinkedIn · Sarah Machmud ↗
+              </a>
+            </p>
+            <p class="proof-highlight">
+              I also teach founders how to bulk‑make content using AI – and I leave that knowledge with you,
+              so your team can keep feeding the algorithm even when I’m not in the room.
+            </p>
+          </div>
+          <div class="bulk-image">
+            <img src="Bulk-Made.jpg" alt="Bulk content made with AI and planning system">
+          </div>
         </div>
       </section>
     </main>
