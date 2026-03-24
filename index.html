@@ -161,6 +161,7 @@
 
     @media (max-width: 800px) {
       main { grid-template-columns: minmax(0, 1fr); }
+      .extra-card-inner { max-width: 100%; }
     }
 
     .hero {
@@ -405,6 +406,35 @@
       padding-top: 8px;
     }
 
+    .testimonial {
+      margin-top: 14px;
+      padding: 10px 11px;
+      border-radius: 14px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.4);
+      font-size: 0.78rem;
+      color: #e5e7eb;
+    }
+
+    .testimonial strong {
+      font-weight: 600;
+    }
+
+    .linkedin-block {
+      margin-top: 12px;
+      font-size: 0.78rem;
+      color: #e5e7eb;
+    }
+
+    .linkedin-block a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .linkedin-block a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       margin-top: 26px;
       font-size: 0.74rem;
@@ -413,15 +443,6 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 8px;
-    }
-
-    footer a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
     }
 
     .links-list {
@@ -444,11 +465,19 @@
     .extra-card {
       grid-column: 1 / -1;
       margin-top: 26px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .extra-card-inner {
+      max-width: 480px;
+      width: 100%;
       padding: 16px 16px 18px;
       border-radius: 18px;
       background: rgba(15,23,42,0.96);
       border: 1px solid rgba(148,163,184,0.45);
       box-shadow: 0 18px 40px rgba(15,23,42,0.9);
+      text-align: left;
     }
 
     .extra-badge {
@@ -456,6 +485,7 @@
       font-weight: 500;
       margin-bottom: 10px;
       color: #e5e7eb;
+      text-align: center;
     }
 
     .highlight-extra {
@@ -478,6 +508,7 @@
       font-size: 0.8rem;
       color: #d1d5db;
       margin-bottom: 10px;
+      text-align: center;
     }
 
     .equation {
@@ -495,6 +526,7 @@
       margin-top: 4px;
       font-weight: 600;
       font-size: 0.95rem;
+      text-align: center;
     }
 
     .options {
@@ -502,6 +534,7 @@
       flex-wrap: wrap;
       gap: 8px;
       margin-top: 10px;
+      justify-content: center;
     }
 
     .option-btn {
@@ -526,6 +559,7 @@
       font-size: 0.8rem;
       color: #d1d5db;
       min-height: 1.2em;
+      text-align: center;
     }
   </style>
 </head>
@@ -560,7 +594,7 @@
             I started out as a lab technician with zero plans to be in content,
             then discovered I had a real talent for performance‑driven creative.
             Today I concept, script, edit and optimize content that drives growth, sales
-            and powerful Black Friday campaigns.
+            and powerful campaigns for brands and local businesses.
           </p>
 
           <div class="metrics-row">
@@ -670,8 +704,9 @@
             <div class="company-main">
               <h3>SarahMachmud · Personal brand</h3>
               <p>
-                Instagram account where I talk about the world, politics and
-                random thoughts, built purely through organic content, not monetised.
+                My personal Instagram, where I talk about the world, politics and
+                random thoughts – a stable, monetisable community built almost entirely
+                through organic content.
               </p>
               <a class="company-link" href="https://www.instagram.com/sarahmachmud/" target="_blank" rel="noopener">
                 Visit @sarahmachmud ↗
@@ -679,10 +714,10 @@
             </div>
             <div class="company-metrics">
               <div class="chip">
-                <span>3K → 11K</span>
-                <span>followers</span>
+                <span>7K → 30K</span>
+                <span>followers in 5 months</span>
               </div>
-              <div>Grown by storytelling & consistent Reels</div>
+              <div>Strong, engaged audience that brands can tap into</div>
             </div>
           </article>
 
@@ -712,6 +747,9 @@
               <p>
                 Organic and paid‑ready creatives for a health & lymphatics brand,
                 including ongoing content and a high‑performing Black Friday campaign.
+                I stopped working with them in January – if we had kept going at the same
+                pace, projections suggest they’d be at 110K+ followers by now; instead,
+                pausing campaigns has slowed that trajectory.
               </p>
               <a class="company-link" href="https://www.instagram.com/chelsey_jean_lymphatics/" target="_blank" rel="noopener">
                 Visit @chelsey_jean_lymphatics ↗
@@ -720,13 +758,13 @@
             <div class="company-metrics">
               <div class="chip">
                 <span>54K → 93K</span>
-                <span>followers</span>
+                <span>followers while we worked together</span>
               </div>
               <div>Black Friday campaign drove $4M in revenue</div>
             </div>
           </article>
 
-          <!-- Case Study 4: Solar / SEO & leads -->
+          <!-- Case Study 4: Sunlife Energy -->
           <article class="company-card">
             <div class="company-main">
               <h3>Sunlife Energy · Solar & SEO</h3>
@@ -754,36 +792,58 @@
           watching the data closely, and doubling down on what converts. I’m based in Brisbane
           and do my best work as a contractor, focused on the exact hours and output you need.
         </p>
+
+        <div class="testimonial">
+          <strong>Smoky Barbershop</strong><br><br>
+          “I passed from 4 bookings a day to 11 bookings and at least 4 walk‑ins.
+          Now I am looking for a new barber and this is life changing. From my understanding
+          she has only played with the SEO of my website and my Google account. I am very happy with everything.”
+          <br><br>
+          <a class="company-link" href="https://www.smokybarbershop.com/" target="_blank" rel="noopener">
+            Visit smokybarbershop.com ↗
+          </a>
+        </div>
+
+        <div class="linkedin-block">
+          If you want to see my clients’ progress over time, check my LinkedIn – I
+          regularly post what I am working on:
+          <br>
+          <a href="https://www.linkedin.com/in/sarah-machmud-556a64176/" target="_blank" rel="noopener">
+            LinkedIn · Sarah Machmud ↗
+          </a>
+        </div>
       </aside>
 
       <!-- FUN EXTRA GAME CARD -->
       <section class="extra-card">
-        <div class="extra-badge">
-          Would you like to know something
-          <span class="highlight-extra">EXTRA</span>
-          for
-          <span class="highlight-free">FREE?</span>
-        </div>
-
-        <p class="extra-copy">
-          If you solved this, your brain already likes my content. Let’s see how you go:
-        </p>
-
-        <div class="equation">
-          If <span class="eq-var">X</span> = 7 and <span class="eq-var">Y</span> = −4,<br/>
-          what is <span class="eq-var">C</span> in this equation?
-          <div class="equation-main">
-            X − Y × 2 = C
+        <div class="extra-card-inner">
+          <div class="extra-badge">
+            Would you like to know something
+            <span class="highlight-extra">EXTRA</span>
+            for
+            <span class="highlight-free">FREE?</span>
           </div>
-        </div>
 
-        <div class="options">
-          <button class="option-btn" data-answer="wrong">C = −1</button>
-          <button class="option-btn" data-answer="correct">C = 15</button>
-          <button class="option-btn" data-answer="wrong">C = 3</button>
-        </div>
+          <p class="extra-copy">
+            If you solved this, your brain already likes my content. Let’s see how you go:
+          </p>
 
-        <div class="extra-message" id="extraMessage"></div>
+          <div class="equation">
+            If <span class="eq-var">X</span> = 7 and <span class="eq-var">Y</span> = −4,<br/>
+            what is <span class="eq-var">C</span> in this equation?
+            <div class="equation-main">
+              X − Y × 2 = C
+            </div>
+          </div>
+
+          <div class="options">
+            <button class="option-btn" data-answer="wrong">C = −1</button>
+            <button class="option-btn" data-answer="correct">C = 15</button>
+            <button class="option-btn" data-answer="wrong">C = 3</button>
+          </div>
+
+          <div class="extra-message" id="extraMessage"></div>
+        </div>
       </section>
     </main>
 
